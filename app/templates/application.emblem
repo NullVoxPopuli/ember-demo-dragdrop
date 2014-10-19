@@ -1,0 +1,18 @@
+h2#title
+  | Welcome to Ember.js with Drag and Drop
+
+.container
+  = drop-zone
+
+  .movie-list
+    = draggable-item title="Iron Man" id=1
+    = draggable-item title="The Amazing Spiderman" id=2
+    = draggable-item title="Captain America" id=3
+
+
+table.events
+  tbody
+    = each event in eventMessages
+      tr.event
+        td.caret &gt;
+        td.message = event
